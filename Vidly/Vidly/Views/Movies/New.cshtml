@@ -1,0 +1,49 @@
+﻿@model Vidly.ViewModels.NewMovieViewModel
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Movies</h2>
+@using (Html.BeginForm("Create", "Movies"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.Name)
+        @Html.TextBoxFor(m => m.Movie.Name, new { @class = "form-control" }) @*any properties insdie anonnymous object will act as html attributes *@
+        @Html.ValidationMessageFor(m => m.Movie.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.ReleaseDate)
+        @Html.TextBoxFor(m => m.Movie.ReleaseDate, new { @class = "form-control" }) @*any properties insdie anonnymous object will act as html attributes *@
+        @Html.ValidationMessageFor(m => m.Movie.ReleaseDate)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.AddedDate)
+        @Html.TextBoxFor(m => m.Movie.AddedDate, new { @class = "form-control" }) @*any properties insdie anonnymous object will act as html attributes *@
+        `    @Html.ValidationMessageFor(m => m.Movie.AddedDate)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.StockNumber)
+        @Html.TextBoxFor(m => m.Movie.StockNumber, new { @class = "form-control" }) @*any properties insdie anonnymous object will act as html attributes *@
+        @Html.ValidationMessageFor(m => m.Movie.StockNumber)
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.GenreId)
+        @Html.DropDownListFor(m => m.Movie.GenreId, new SelectList(Model.Genres, "Id", "Name"), "SelectMembershipType", new { @class = "form-control" }) @*any properties insdie anonnymous object will act as html attributes *@
+    </div> @*for this part we have created newcustomerviewmodel class to access both customer data and membershipt data*@
+    @Html.HiddenFor(m => m.Movie.Id)
+    @Html.AntiForgeryToken()
+
+    <button type="submit" class="btn btn_primary"> Save</button>
+
+
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

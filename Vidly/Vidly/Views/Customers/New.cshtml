@@ -1,0 +1,50 @@
+﻿@model Vidly.ViewModels.NewCustomerViewModel
+@{
+    /**/
+
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Customer</h2>
+@*using will create dispose method which will generate closing tags of  html*@
+@*Helper tag automatically support the validation/Annotation used in Class domain attributes*@
+@using (Html.BeginForm("Create", "Customers"))
+{
+    @Html.ValidationSummary(true, "Please enter all the field properly") @*used to present all the validation in the top of the form and true will exclude all the individual property error from the validation summary*@
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.Name)
+        @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })@*lambda function is used to bind form data to domain model properties and vice versa*@ @*any properties insdie anonnymous object will act as html attributes *@
+        @Html.ValidationMessageFor(m => m.Customer.Name)   @*here m object wich hold the model class sent from controller*@
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.BirthDate)
+        @Html.TextBoxFor(m => m.Customer.BirthDate, new { @class = "form-control" }) @*any properties insdie anonnymous object will act as html attributes *@
+        @Html.ValidationMessageFor(m => m.Customer.BirthDate)
+    </div>
+
+
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.Customer.IsSubscribedToNewsletter) Subscribed to Newsletter ?
+        </label>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Customer.MembershipTypeId)
+            @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "SelectMembershipType", new { @class = "form-control" }) @*any properties insdie anonnymous object will act as html attributes *@
+            @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
+        </div>                                                                                                                                                                  @*for this part we have created newcustomerviewmodel class to access both customer data and membershipt data*@
+        @Html.HiddenFor(m => m.Customer.Id)
+        @Html.AntiForgeryToken()   @*create token in a hidden field*@
+        <button type="submit" class="btn btn_primary"> Save</button>
+    </div>
+
+}
+
+@*A section allows you to add something in a view which will be added in the layout*@
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    }
