@@ -123,3 +123,11 @@ D:\Quarantine dotnet project\Vidly\Vidly\obj\Debug\Vidly.Migrations.FormatRemove
 D:\Quarantine dotnet project\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMoviesData.resources
 D:\Quarantine dotnet project\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddRequiredToGenreId.resources
 D:\Quarantine dotnet project\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedDataAnnotation.resources
+D:\Quarantine dotnet project\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+D:\Quarantine dotnet project\Vidly\Vidly\bin\System.Web.Http.dll
+D:\Quarantine dotnet project\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+D:\Quarantine dotnet project\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+D:\Quarantine dotnet project\Vidly\Vidly\bin\System.Web.Http.xml
+D:\Quarantine dotnet project\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+D:\Quarantine dotnet project\Vidly\Vidly\bin\AutoMapper.dll
+D:\Quarantine dotnet project\Vidly\Vidly\bin\AutoMapper.xml

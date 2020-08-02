@@ -5,6 +5,7 @@
 }
 
 <h2>New Movies</h2>
+ Html.ActionLink("AddMovies", "New", "Movies") %>
 @using (Html.BeginForm("Create", "Movies"))
 {
     @Html.ValidationSummary(true, "Please fix the following errors.")
@@ -47,3 +48,4 @@
 {
     @Scripts.Render("~/bundles/jqueryval")
 }
+@*section is used to render child view in the contentsection of master page  *@
