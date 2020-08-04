@@ -25,9 +25,10 @@ namespace Vidly.Controllers
 
         public ViewResult Index()
         {
-            var customers = __context.Customers.Include(c => c.MembershipType).ToList();            // ego loading which means loading membershiptype object with customer object//to list is used to execute query immediatiley whith out goinng to view for iteration
+            //var customers = __context.Customers.Include(c => c.MembershipType).ToList();            // ego loading which means loading membershiptype object with customer object//to list is used to execute query immediatiley whith out goinng to view for iteration
 
-            return View(customers);
+            // return View(customers);
+            return View();
         }
 
         public ActionResult Details(int id)

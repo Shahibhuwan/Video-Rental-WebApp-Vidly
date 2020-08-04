@@ -17,7 +17,7 @@
         @Html.LabelFor(m => m.Customer.Name)
         @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })@*lambda function is used to bind form data to domain model properties and vice versa*@ @*any properties insdie anonnymous object will act as html attributes *@
         @Html.ValidationMessageFor(m => m.Customer.Name)   @*here m object wich hold the model class sent from controller*@
-    </div>s
+    </div>
 <div class="form-group">
     @Html.LabelFor(m => m.Customer.BirthDate)
     @Html.TextBoxFor(m => m.Customer.BirthDate, new { @class = "form-control" }) @*any properties insdie anonnymous object will act as html attributes *@
