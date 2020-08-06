@@ -131,3 +131,5 @@ D:\Quarantine dotnet project\Vidly\Vidly\bin\System.Web.Http.xml
 D:\Quarantine dotnet project\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
 D:\Quarantine dotnet project\Vidly\Vidly\bin\AutoMapper.dll
 D:\Quarantine dotnet project\Vidly\Vidly\bin\AutoMapper.xml
+D:\Quarantine dotnet project\Vidly\Vidly\obj\Debug\Vidly.Migrations.SeedUsers.resources
+D:\Quarantine dotnet project\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddPhoneNumberToApplicationUser.resources

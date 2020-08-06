@@ -5,7 +5,7 @@
 }
 
 <h2>New Movies</h2>
- Html.ActionLink("AddMovies", "New", "Movies") %>
+
 @using (Html.BeginForm("Create", "Movies"))
 {
     @Html.ValidationSummary(true, "Please fix the following errors.")
